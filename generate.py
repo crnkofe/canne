@@ -58,7 +58,7 @@ def humane_pool(pool_competitors):
     return humane_pairs
 
 shuffled_competitors = random.shuffle(competitors)
-pool_length = len(competitors) / pools
+pool_length = len(competitors) / pools + (len(competitors) % pools)
 for pool in range(pools):
     start_pool = pool * pool_length
     print("Pool {}".format(pool + 1))
